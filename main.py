@@ -3,8 +3,7 @@ from curso import Curso
 from estudiante import Estudiante
 
 
-estudiante = Estudiante()
-curso = Curso()
+
 
 #Instancias de Estudiante
 estudiante_uno = Estudiante(1,"Alma Marcelo Goza",2000)
