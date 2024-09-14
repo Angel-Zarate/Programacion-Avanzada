@@ -1,13 +1,11 @@
-import random
 from curso import Curso
 from estudiante import Estudiante
 
-sf
-
-
+estudiante = Estudiante()
+curso = Curso()
 #Instancias de Estudiante
-estudiante_uno = Estudiante(1,"Alma Marcelo Goza",2000)
-estudiante_dos = Estudiante(2,"Jorge Nitales",2005)
+estudiante_uno = Estudiante(1,"Jose Torres",2000)
+estudiante_dos = Estudiante(2,"Chava Iglesias",2005)
 
 #Instancias de Curso
 curso_uno = Curso("Apreciacion al arte",435,"Agripino Solis")
@@ -18,4 +16,4 @@ estudiante.agregar_curso(curso_uno)
 estudiante.agregar_curso(curso_dos)
 estudiante.agregar_curso(curso_tres)
 
-estudiante.mostrar_informacion()d
+estudiante.mostrar_informacion(estudiante_uno,estudiante_dos)

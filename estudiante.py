@@ -16,10 +16,13 @@ class Estudiante:
         self.cursos.append(curso_agregado)
     
             
-    def mostrar_informacion(self):
+    def mostrar_informacion(self,estudiante):
         for curso in self.cursos:
             print("\n")
             print("Nombre de la materia: ", curso.nombre)
             print("Codigo de la materia: ", curso.codigo_curso)
             print("Nombre del maestro: ", curso.instructor)
+            print("Nombre: ",estudiante.nombre)
+            print("ID: ",estudiante.id_estudiante)
+            print("Nombre: ",estudiante.ano_nacimiento)
         
