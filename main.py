@@ -2,7 +2,7 @@ import random
 from curso import Curso
 from estudiante import Estudiante
 
-
+sf
 
 
 #Instancias de Estudiante
