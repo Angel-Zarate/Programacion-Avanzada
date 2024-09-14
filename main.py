@@ -18,4 +18,4 @@ estudiante.agregar_curso(curso_uno)
 estudiante.agregar_curso(curso_dos)
 estudiante.agregar_curso(curso_tres)
 
-estudiante.mostrar_informacion()
+estudiante.mostrar_informacion()d
