@@ -1,7 +1,13 @@
+from typing import List
+from paciente.paciente import Paciente
+from medico.medico import Medico
+from consulta.consulta import Consulta
+
+
 class Hospital:
-    pacientes = []
-    medicos = []
-    consultas = []
+    pacientes: List[Paciente] = []
+    medicos: List[Medico] = []
+    consultas: List[Consulta] = []
 
     def registrar_consulta(self,id_paciente,id_medico):
         if not self.validar_cantidad_usuarios():
@@ -17,6 +23,7 @@ class Hospital:
         for paciente in self.pacientes:
             if paciente.ano_nacimiento > 2006:
                 print(paciente.mostrar_informacion())
+            
                 
     def pacientes_mayores_edad(self):
         print("Pacientes mayores de edad: ")
@@ -31,7 +38,7 @@ class Hospital:
             if eleccion == paciente.id:
                 self.pacientes.remove(paciente)
                 print("\nSe ha eliminado con exito")
-                print("\nPacientes en sistema:")
+                print("\nPacientes en elsistema:")
                 for paciente in self.pacientes:
                     paciente.mostrar_informacion()
                     print("\n")

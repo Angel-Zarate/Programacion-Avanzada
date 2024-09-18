@@ -1,29 +1,82 @@
-from paciente import Paciente
-from hospital import Hospital
-from medico import Medico
+from paciente.paciente import Paciente
+from hospital.hospital import Hospital
+from medico.medico import Medico
 
 hospital = Hospital()
 
-
-paciente = Paciente("Juan",2004,76,1.78,"Avenida Madero")
-paciente_dos = Paciente("Messi",2008,100,1.50,"Avenida Madero")
-
-medico = Medico("Alberto",1900,"SADF54SFDF","Av. Periodismo")
-medico_dos = Medico("Manolo",1995,"SADF54S54G","Altozano")
-
-hospital.registrar_paciente(paciente=paciente)
-hospital.registrar_paciente(paciente=paciente_dos)
-hospital.registrar_medico(medico=medico)
-hospital.registrar_medico(medico=medico_dos)
-
-hospital.mostrar_pacientes()
-print("\n")
-hospital.mostrar_medicos()
-print("\n")
-hospital.pacientes_menores_edad()
-print("\n")
-hospital.pacientes_mayores_edad()
-print("\n")
-hospital.eliminar_paciente()
-print("\n")
-hospital.eliminar_medico()
+while True:
+    print("\n**Bienvenido al sistema del hospital!**")
+    print("1. Registrar Paciente")
+    print("2. Registrar Medico")
+    print("3. Mostrar Pacientes")
+    print("4. Mostrar Medicos")
+    print("5. Eliminar Pacientes")
+    print("6. Eliminar Medicos")
+    print("7. Mostrar pacientes menores de edad")
+    print("8. Mostrar pacientes mayores de edad")
+    print("9. Salir")
+    
+    opcion_usuario = input("\nSelecciona la opcion deseada: ")
+    
+    if opcion_usuario == "1":
+        #Registrar Paciente
+        print("Seleccionaste la opcion para registrar un paciente")
+        
+        nombre = input("Ingresa el nombre: ")
+        ano_nacimiento = int(input("Ingresa el año de nacimiento: "))
+        peso = float(input("Ingresa el peso: "))
+        estatura = float(input("Ingresa la estatura: "))
+        direccion = input("Ingresa la direccion: ")
+        
+        paciente = Paciente(nombre=nombre,ano_nacimiento=ano_nacimiento,peso=peso,estatura=estatura,direccion=direccion)
+        hospital.registrar_paciente(paciente=paciente)
+        
+        print("Paciente registrado correctamente\n")
+        pass
+    
+    elif opcion_usuario == "2":
+        #Registrar medico
+        print("Seleccionaste la opcion para registrar un medico")
+        
+        nombre = input("Ingresa el nombre: ")
+        ano_nacimiento = int(input("Ingresa el año de nacimiento: "))
+        rfc = input("Ingresa el RFC: ")
+        direccion = input("Ingresa la direccion: ")
+        
+        medico = Medico(nombre=nombre,ano_nacimiento=ano_nacimiento,rfc=rfc,direccion=direccion)
+        hospital.registrar_medico(medico=medico)
+        
+        print("Medico registrado correctamente\n")
+    
+        
+    elif opcion_usuario == "3":
+        #Mostrar pacientes
+        hospital.mostrar_pacientes()
+        
+    elif opcion_usuario=="4":
+        #Mostrar medicos
+        hospital.mostrar_medicos()
+        
+    elif opcion_usuario=="5":
+        #Eliminar paciente
+        hospital.eliminar_paciente()
+        
+    elif opcion_usuario=="6":
+        #Eliminar medico
+        hospital.eliminar_medico()
+        
+    elif opcion_usuario=="7":
+        #Mostrar pacientes menores de edad
+        hospital.pacientes_menores_edad()
+        
+    elif opcion_usuario=="8":
+        #Mostrar pacientes mayores de edad
+        hospital.pacientes_mayores_edad()
+        
+    elif opcion_usuario=="9":
+        print("Hasta luego\n")
+        break
+        
+    
+    
+    
