@@ -39,7 +39,7 @@ def dividir():
  
  #Crea la ventana y le da formato
 ventana = tk.Tk()
-ventana.title("Calculadora de Suma")
+ventana.title("Calculadora")
 ventana.geometry("500x400")
 
 #Agrega las funciones del boton numero 1 de la ventana
